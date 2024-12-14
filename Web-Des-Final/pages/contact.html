@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Castaneda Web-Design Final</title>
+    <link rel="stylesheet" href="../css/master.css" />
+  </head>
+  <header>
+    <!-- NavBar Container -->
+    <div class="navBar">
+      <div class="hamburger-menu" id="hamburger-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <div class="nav-links" id="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="aboutme.html">About Me</a>
+        <a href="projects.html">Projects</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact Me</a>
+      </div>
+    </div>
+  </header>
+  <body>
+    <!-- I modeled my websited after an example I saw in W3Schools. -->
+    <main>
+      <div class="body">
+        <div class="bodyGrid">
+          <div class="leftColumn">
+            <div class="contactform">
+              <h2>Get in touch:</h2>
+              <br />
+              <p>
+                Thank you for visiting my website, if you would like to get in
+                contact with me feel free to use the webform below, otherwise
+                you can also find my contact info in the resume section of the
+                website. If you have any questions comments or concerns I would
+                love to hear it.
+              </p>
+              <br />
+            </div>
+            <br />
+          </div>
+          <div class="rightColumn" id="contactForm">
+            <!-- Web Form: Users (Name, email, company) -->
+            <form method="POST" class="contact-form">
+              <!-- Name Field -->
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" placeholder="What they be calling you." required aria-required="true"/>
+
+              <!-- Email Field -->
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" placeholder="Promise I won't send you spam/" required aria-required="true"/>
+
+              <!-- Subject Field -->
+              <label for="subject">Subject:</label>
+              <input type="text" id="subject" name="subject" placeholder="Today's news..." required aria-required="true"/>
+
+              <!-- Message Field -->
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" placeholder="Have an awesome day, now say it back." required aria-required="true"></textarea>
+
+              <!-- Feedback Field -->
+              <label for="feedback">What was your favorite feature of my website?</label>
+              <textarea id="feedback" name="feedback" placeholder="My favorite feature was...."required aria-required="true"></textarea>
+
+              <!-- Submit Button -->
+              <button type="submit">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <!-- Some JS to validate my form. -->
+  <script src="../js/contact.js" defer></script>
+  <!-- Some JS to handle form submission that was crashing my website. -->
+  <script src="../js/submission.js" defer></script>
+  <!-- Hamburger Menu js -->
+  <script src="../js/hamburgerMenu.js" defer></script>
+  <footer>&copy; Brendan Castaneda</footer>
+</html>

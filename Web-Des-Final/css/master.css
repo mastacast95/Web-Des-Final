@@ -1,0 +1,395 @@
+/* Root Variables for Colors */
+:root {
+  --darkGreen: #16423c;
+  --lightGreen: #6a9c89;
+  --darkGreenGrey: #c4dad2;
+  --lightGreenGrey: #e9efec;
+  --cardBackground: #ffffff;
+  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --border-radius: 8px;
+  --padding: 20px;
+}
+
+/* Global Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main Content */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--lightGreenGrey);
+  color: #333;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #006064;
+  color: #fff;
+  padding: 10px;
+}
+
+/* Navigation Styling */
+
+.navBar {
+  background-color: var(--lightGreenGrey);
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.navBar a {
+  color: var(--darkGreen);
+  text-decoration: none;
+  margin: 0 15px;
+  padding: 10px;
+}
+
+.navBar a:hover {
+  background-color: var(--darkGreenGrey);
+  border-radius: 5px;
+}
+
+/* Layout Grid */
+
+.body {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.bodyGrid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  width: 80%;
+  max-width: 1200px;
+}
+
+/* Left Column Styling */
+.leftColumn {
+  background-color: var(--cardBackground);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/* Right Column */
+.rightColumn {
+  background-color: var(--cardBackground);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+#contactForm {
+ display: block;
+}
+
+/* Reusable Card Styles */
+.card {
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+  padding: var(--padding);
+}
+
+.vita {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.vita img {
+  max-height: 85%;
+  max-width: 95%;
+  border-radius: 50%;
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.slideshow {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.slideshow img {
+  max-width: 40%;
+}
+
+
+/* General Reset for the Contact Form */
+.contact-form {
+  max-width: 600px; /* Limit form width for better readability */
+  margin: 0 auto; /* Center align the form */
+  padding: 20px; /* Add padding around the form */
+  background-color: #f9f9f9; /* Subtle background color */
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 6px var(--box-shadow); /* Subtle shadow for depth */
+  font-family: Arial, sans-serif; /* Use a clean font */
+}
+
+/* Style for Labels */
+.contact-form label {
+  display: block; /* Each label on its own line */
+  margin-top: 15px; /* Space above labels */
+  font-weight: bold; /* Make labels stand out */
+  color: #333; /* Darker font color for contrast */
+}
+
+/* Style for Input Fields and Textarea */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%; /* Full width of container */
+  padding: 10px; /* Add padding inside the field */
+  margin-top: 5px; /* Space between label and field */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Comfortable font size */
+  font-family: Arial, sans-serif; /* Match font with form */
+  resize: vertical; /* Allow resizing only vertically */
+  box-shadow: inset 0 1px 3px var(--box-shadow); /* Inset shadow for depth */
+  transition: border-color 0.3s, box-shadow 0.3s; /* Smooth focus effect */
+}
+
+/* Focus State for Inputs and Textarea */
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+  border-color: #007bff; /* Highlight border on focus */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Glow effect */
+  outline: none; /* Remove default outline */
+}
+
+/* Style for Submit Button */
+.contact-form button[type="submit"] {
+  display: block; /* Center the button */
+  width: 100%; /* Full width */
+  background-color: var(--lightGreen); /* Primary color */
+  color: var(--cardBackground); /* White text */
+  padding: 10px; /* Padding for clickable area */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 18px; /* Larger font size */
+  font-weight: bold; /* Make text stand out */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth hover effects */
+}
+
+/* Hover Effect for Submit Button */
+.contact-form button[type="submit"]:hover {
+  background-color: var(--darkGreen); /* Darker shade on hover */
+  transform: translateY(-2px); /* Lift effect */
+}
+
+/* Basic styles for the hamburger icon */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.hamburger-menu .bar {
+  width: 30px;
+  height: 5px;
+  background-color: #333;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+/* Navigation links container */
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Basic styles for the hamburger icon */
+.hamburger-menu {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.hamburger-menu .bar {
+  width: 30px;
+  height: 5px;
+  background-color: #333;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+/* Navigation links container */
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+/* For mobile and tablet, hide the nav links initially */
+@media (max-width: 768px) {
+  .hamburger-menu {
+    display: flex; /* Show hamburger menu on smaller screens */
+  }
+
+  .nav-links {
+    display: none; /* Hide the nav links by default */
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--lightGreenGrey);
+    position: absolute;
+    top: 60px; /* Align below the navbar */
+    left: 0;
+    padding: 20px;
+    gap: 10px;
+  }
+
+  .nav-links a {
+    color: var(--darkGreen);
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .nav-links a:hover {
+    background-color: var(--darkGreenGrey);
+    border-radius: 5px;
+  }
+
+  /* When the menu is active, show the nav links */
+  .nav-links.active {
+    display: flex;
+  }
+}
+
+/* For mobile phones, adjust the styling further */
+@media (max-width: 480px) {
+  .nav-links a {
+    font-size: 16px; /* Adjust font size for smaller screens */
+  }
+}
+
+/* Mobile First CSS - Media Queries */
+
+/* For devices with a max width of 768px (Tablets and below) */
+@media (max-width: 768px) {
+  .bodyGrid {
+    grid-template-columns: 1fr; /* Stack columns on smaller screens */
+  }
+
+  .navBar {
+    flex-direction: column; /* Stack navigation links vertically */
+  }
+
+  .navBar a {
+    margin: 5px 0; /* Reduce margin between links */
+  }
+
+  .slideshow img {
+    max-width: 80%; /* Make images in slideshow larger on mobile */
+  }
+
+  .contact-form {
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form textarea {
+    font-size: 14px; /* Reduce font size for better readability */
+  }
+
+  .contact-form button[type="submit"] {
+    font-size: 16px; /* Slightly smaller button text */
+  }
+}
+
+/* For devices with a max width of 480px (Mobile Phones) */
+@media (max-width: 480px) {
+  .body {
+    padding: 10px; /* Reduce padding for mobile screens */
+  }
+
+  .navBar {
+    padding: 5px; /* Reduce padding for the navbar */
+  }
+
+  .navBar a {
+    margin: 5px; /* Adjust margin for better spacing */
+    font-size: 14px; /* Reduce font size of navigation links */
+  }
+
+  .leftColumn,
+  .rightColumn {
+    padding: 15px; /* Adjust padding inside columns */
+  }
+
+  .vita img {
+    max-width: 70%; /* Make the profile picture smaller */
+  }
+
+  .slideshow img {
+    max-width: 90%; /* Make slideshow images larger */
+  }
+
+  .contact-form {
+    width: 100%; /* Ensure form takes full width */
+    padding: 10px; /* Further reduce padding */
+  }
+
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form textarea {
+    font-size: 14px; /* Smaller input field text */
+  }
+
+  .contact-form button[type="submit"] {
+    font-size: 14px; /* Smaller button font for mobile */
+  }
+}

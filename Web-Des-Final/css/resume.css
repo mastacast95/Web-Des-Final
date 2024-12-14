@@ -1,0 +1,390 @@
+/* Root Variables for Colors */
+:root {
+  --darkGreen: #16423c;
+  --lightGreen: #6a9c89;
+  --darkGreenGrey: #c4dad2;
+  --lightGreenGrey: #e9efec;
+  --cardBackground: #ffffff;
+  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --border-radius: 8px;
+  --padding: 20px;
+}
+
+/* Global Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main Content */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--lightGreenGrey);
+  color: #333;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #006064;
+  color: #fff;
+  padding: 10px;
+}
+
+/* Navigation Styling */
+
+.navBar {
+  background-color: var(--lightGreenGrey);
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.navBar a {
+  color: var(--darkGreen);
+  text-decoration: none;
+  margin: 0 15px;
+  padding: 10px;
+}
+
+.navBar a:hover {
+  background-color: var(--darkGreenGrey);
+  border-radius: 5px;
+}
+
+/* Layout Grid */
+.body {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.bodyGrid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  width: 80%;
+  max-width: 1200px;
+}
+
+/* Left Column */
+.leftColumn {
+  background-color: var(--cardBackground);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.cardContainer {
+  text-align: center;
+}
+
+.cardContainer img {
+  width: 85%;
+  height: 50%;
+  border-radius: 45%;
+  object-fit: cover;
+}
+
+.textContainer h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #006064;
+}
+
+.infoContainer p {
+  margin: 10px 0;
+}
+
+.infoContainer a {
+  color: #006064;
+  text-decoration: none;
+}
+
+/* Right Column */
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.topCard,
+.middleCard,
+.bottomCard {
+  background-color: var(--cardBackground);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px var(--box-shadow);
+  row-gap: 10px;
+}
+
+
+.middleCard ul {
+  list-style: none;
+  padding: 0;
+}
+
+.middleCard li {
+  margin: 10px 0;
+}
+
+/* Job Experience Cards */
+.currentJob,
+.previoustJob,
+.olderJob {
+  margin-bottom: 15px;
+}
+
+.currentJob h5,
+.previoustJob h5,
+.olderJob h5 {
+  margin: 0;
+  color: black;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.currentJob h6,
+.previoustJob h6,
+.olderJob h6 {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.currentJob p,
+.previoustJob p,
+.olderJob p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background-color: #fff;
+    color: #000;
+    font-size: 12px;
+  }
+
+  .navBar {
+    display: none;
+  }
+
+  .bodyCont {
+    width: 100%;
+    padding: 0;
+  }
+
+  .leftThird,
+  .rightThird {
+    box-shadow: none;
+  }
+
+  .leftThird img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .topCard,
+  .middleCard,
+  .bottomCard {
+    page-break-inside: avoid;
+    padding: 10px;
+    margin: 0;
+  }
+
+  footer {
+    display: none;
+  }
+}
+
+/* Basic styles for the hamburger icon */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.hamburger-menu .bar {
+  width: 30px;
+  height: 5px;
+  background-color: #333;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+/* Navigation links container */
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Basic styles for the hamburger icon */
+.hamburger-menu {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.hamburger-menu .bar {
+  width: 30px;
+  height: 5px;
+  background-color: #333;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+/* Navigation links container */
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+/* For mobile and tablet, hide the nav links initially */
+@media (max-width: 768px) {
+  .hamburger-menu {
+    display: flex; /* Show hamburger menu on smaller screens */
+  }
+
+  .nav-links {
+    display: none; /* Hide the nav links by default */
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--lightGreenGrey);
+    position: absolute;
+    top: 60px; /* Align below the navbar */
+    left: 0;
+    padding: 20px;
+    gap: 10px;
+  }
+
+  .nav-links a {
+    color: var(--darkGreen);
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .nav-links a:hover {
+    background-color: var(--darkGreenGrey);
+    border-radius: 5px;
+  }
+
+  /* When the menu is active, show the nav links */
+  .nav-links.active {
+    display: flex;
+  }
+}
+
+/* For mobile phones, adjust the styling further */
+@media (max-width: 480px) {
+  .nav-links a {
+    font-size: 16px; /* Adjust font size for smaller screens */
+  }
+}
+
+/* Mobile First CSS - Media Queries */
+
+/* For devices with a max width of 768px (Tablets and below) */
+@media (max-width: 768px) {
+  .bodyGrid {
+    grid-template-columns: 1fr; /* Stack columns on smaller screens */
+  }
+
+  .navBar {
+    flex-direction: column; /* Stack navigation links vertically */
+  }
+
+  .navBar a {
+    margin: 5px 0; /* Reduce margin between links */
+  }
+
+  .slideshow img {
+    max-width: 80%; /* Make images in slideshow larger on mobile */
+  }
+
+  .contact-form {
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form textarea {
+    font-size: 14px; /* Reduce font size for better readability */
+  }
+
+  .contact-form button[type="submit"] {
+    font-size: 16px; /* Slightly smaller button text */
+  }
+}
+
+/* For devices with a max width of 480px (Mobile Phones) */
+@media (max-width: 480px) {
+  .body {
+    padding: 10px; /* Reduce padding for mobile screens */
+  }
+
+  .navBar {
+    padding: 5px; /* Reduce padding for the navbar */
+  }
+
+  .navBar a {
+    margin: 5px; /* Adjust margin for better spacing */
+    font-size: 14px; /* Reduce font size of navigation links */
+  }
+
+  .leftColumn,
+  .rightColumn {
+    padding: 15px; /* Adjust padding inside columns */
+  }
+
+  .vita img {
+    max-width: 70%; /* Make the profile picture smaller */
+  }
+
+  .slideshow img {
+    max-width: 90%; /* Make slideshow images larger */
+  }
+
+  .contact-form {
+    width: 100%; /* Ensure form takes full width */
+    padding: 10px; /* Further reduce padding */
+  }
+
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form textarea {
+    font-size: 14px; /* Smaller input field text */
+  }
+
+  .contact-form button[type="submit"] {
+    font-size: 14px; /* Smaller button font for mobile */
+  }
+}
